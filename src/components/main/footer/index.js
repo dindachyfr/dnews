@@ -3,8 +3,8 @@ import styles from './footer.module.css'
 const Footer = () => {
 
     return (
-        <div className={`${styles.footer} footer container-fluid g-0 p-5 pb-4 bg-blue d-lg-block d-none`}>
-            <div className="wrapper p-5 d-flex justify-content-between align-items-center">
+        <div className={`${styles.footer} footer container-fluid g-0 px-5 pb-4 bg-blue d-lg-block d-none`}>
+            <div className="wrapper py-5 d-flex justify-content-between align-items-center">
                 <div className={`d-flex justify-content-between flex-column`}>
                     <p className="text-cream mb-5">Why D'News</p>
                     <p className="text-cream mb-5">Be an Author</p>
