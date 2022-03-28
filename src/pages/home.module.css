@@ -1,0 +1,35 @@
+.headerBG {
+    background: url("../assets/BG.svg") no-repeat;
+    height: 70vh;
+    width: 100vw;
+    background-size: cover;
+}
+
+.title{
+    font-size: 4rem;
+}
+
+span.spanWrapping, input.formControl {
+    background: transparent;
+    border: none;
+    outline: none;
+}
+
+.formInput{
+    border: solid 1px #c8c6c6;
+    border-radius: 1rem;
+}
+
+.wrapperRec{
+    width: 25rem;
+    box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.2);
+    border-radius: 16px;
+  }
+
+.recImg{
+    border-radius: 16px;
+}
+
+.sucessSS{
+    height: 50vh;
+}

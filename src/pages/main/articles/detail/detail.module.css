@@ -1,0 +1,18 @@
+.radiusbtn{
+    border-radius: 1rem;
+    font-size: 1.5rem;
+    border: solid 1px #c8c6c6;
+}
+
+.radiusbtn:hover{
+    color: #c8c6c6!important;
+    background-color: #fff5de!important;
+}
+
+.inputComment{
+    width: 150%;
+    border: none;
+    border-bottom: solid 1px #c8c6c6;
+    padding: .5rem 1rem;
+    outline: none;
+}

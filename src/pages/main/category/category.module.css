@@ -1,0 +1,17 @@
+.headerBG {
+    background: url("../../../assets/BGCat.svg") no-repeat;
+    height: 60vh;
+    width: 100vw;
+    background-size: cover;
+}
+
+.title{
+    font-size: 4rem;
+}
+
+.selectInput{
+    border-radius: 1rem;
+    outline: none;
+    border: solid .5px #c8c6c6
+}
+

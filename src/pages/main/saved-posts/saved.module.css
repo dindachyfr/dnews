@@ -1,0 +1,13 @@
+.recImg{
+    border-radius: 16px;
+}
+
+/* .concon{
+    overflow-y: auto;
+} */
+
+.wrapperRec{
+    width: 20rem;
+    box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.2);
+    border-radius: 16px;
+  }

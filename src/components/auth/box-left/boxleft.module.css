@@ -1,0 +1,13 @@
+.boxleft, .boxright{
+    padding: 3rem 5rem
+}
+
+.radiusbtn{
+    border-radius: 1rem;
+    font-size: 1.5rem;
+}
+
+.radiusbtn:hover{
+    color: #fff5de!important;
+    cursor: pointer;
+}

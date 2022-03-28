@@ -1,0 +1,33 @@
+.mainCon{
+    height: 100vh;
+}
+
+.profileBox{
+    height: 35%;
+}
+
+.menu{
+    border: solid 1px #c8c6c6;
+}
+
+.inputBorder{
+    border: solid 1px #c8c6c6;
+    border-radius: 1rem;
+}
+
+.conModal{
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,.5);
+}
+
+.modalPin{
+    position: fixed;
+    border-radius: 2rem;
+    top: 20vh;
+    left: 37.5vw;   
+    height: 65vh!important; 
+}

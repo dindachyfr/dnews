@@ -1,0 +1,27 @@
+.headerBG {
+    background: url("../../../assets/BGArticles.svg") no-repeat;
+    height: 60vh;
+    width: 100vw;
+    background-size: cover;
+}
+
+.selectInput{
+    border-radius: 1rem;
+    outline: none;
+    border: solid .5px #c8c6c6
+}
+
+.title{
+    font-size: 4rem;
+}
+
+
+.recImg{
+    border-radius: 16px;
+}
+
+.wrapperRec{
+    width: 25rem;
+    box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.2);
+    border-radius: 16px;
+  }
