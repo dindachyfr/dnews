@@ -38,7 +38,7 @@ const getLatest = () => {
 }
 
 const getSaved = (id) => {
-    const {data, error} = useSWR(['GET', `http://localhost:5000/saved-post/${id}`],
+    const {data, error} = useSWR(['GET', `https://dnews-dindin.herokuapp.com/saved-post/${id}`],
      fetcher, 
     //  {revalidateIfStale: false, revalidateOnFocus: false, revalidateOnReconnect:false}
      )

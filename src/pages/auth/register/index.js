@@ -22,7 +22,7 @@ const Register = () => {
     }
     const handleSubmit = () => {
         console.log(form);
-        fetcher('POST', 'http://localhost:5000/users/register', {data: form})
+        fetcher('POST', `https://dnews-dindin.herokuapp.com/users/register`, {data: form})
         .then((res)=> {
             router.push("/auth/login")
         }).catch((err)=> {

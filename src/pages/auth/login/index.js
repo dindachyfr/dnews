@@ -20,7 +20,7 @@ const Login = () => {
     }
     const handleLogin = () =>{
         console.log(form);
-        fetcher('POST', 'http://localhost:5000/users/login', {data: form})
+        fetcher('POST', 'https://dnews-dindin.herokuapp.com/users/login', {data: form})
         .then((res)=> {
             const result = res?.data?.data[0]
             const token = result.token

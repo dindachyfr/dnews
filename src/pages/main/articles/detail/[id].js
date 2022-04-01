@@ -8,11 +8,24 @@ import { getDetailArticle } from '../../../api/article'
 import { getComments } from '../../../api/comment'
 import fetcher from '../../../../helper/fetcher'
 
-const ArticleDetail = () => {
+export const getServerSideProps = async ({params}) => {
+    const art = await fetch(`${process.env.NEXT_PUBLIC_BACKEND}/articles/detail/${params.id}`, {
+        method : 'GET'
+    })
+    const article = await art.json()
+    return {
+        props : {
+            article: article?.data,
+        }
+    }
+  }
+
+
+const ArticleDetail = ({article}) => {
     const router = useRouter()
     const id = router.query.id
     const user = typeof window !== 'undefined' && JSON.parse(localStorage.getItem('user'))
-    const { article } = getDetailArticle(id)
+    // const { article } = getDetailArticle(id)
     const { comments } = getComments(id)
     const DATE_OPTIONS = {
         weekday: "long",
@@ -30,7 +43,7 @@ const ArticleDetail = () => {
 
     const handleSubmit = () => {
         if (user) {
-            fetcher('POST', 'http://localhost:5000/comment', {
+            fetcher('POST', 'https://dnews-dindin.herokuapp.com/comment', {
                 data: {
                     user_id: user.id,
                     article_id: id,
@@ -51,7 +64,7 @@ const ArticleDetail = () => {
     const handleLike = () => {
         if (user) {
             if (!like) {
-                fetcher('PUT', `http://localhost:5000/articles/like/${id}`)
+                fetcher('PUT', `https://dnews-dindin.herokuapp.com/articles/like/${id}`)
                     .then((res) => {
                         setLike(true)       //kalo true, nanti di tambahin jmlh like, kalo ga, dikurangin
                         console.log("yha benar");
@@ -59,7 +72,7 @@ const ArticleDetail = () => {
                         console.log(err);
                     })
             } else {
-                fetcher('PUT', `http://localhost:5000/articles/dislike/${id}`)
+                fetcher('PUT', `https://dnews-dindin.herokuapp.com/articles/dislike/${id}`)
                     .then((res) => {
                         setLike(false)       //kalo true, nanti di tambahin jmlh like, kalo ga, dikurangin
                         console.log("yha salah");
@@ -75,7 +88,7 @@ const ArticleDetail = () => {
     const handleSave = () => {
         if (user) {
             if (!save) {
-                fetcher('POST', `http://localhost:5000/saved-post`, {
+                fetcher('POST', `https://dnews-dindin.herokuapp.com/saved-post`, {
                     data: {
                         user_id: user.id,
                         article_id: id
@@ -91,7 +104,7 @@ const ArticleDetail = () => {
                         }
                     })
             } else {
-                fetcher('DELETE', `http://localhost:5000/saved-post/${user.id}/${id}`)
+                fetcher('DELETE', `https://dnews-dindin.herokuapp.com/saved-post/${user.id}/${id}`)
                     .then((res) => {
                         setSave(false)       //kalo true, nanti di tambahin jmlh like, kalo ga, dikurangin
                         console.log("yha salah");

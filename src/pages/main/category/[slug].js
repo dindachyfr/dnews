@@ -6,10 +6,23 @@ import styles from './catslug.module.css'
 import { getArtByCat } from '../../api/article'
 import Kucing from '../../../assets/kucingjulid.jpg'
 
-const Cats = () => {
+export const getServerSideProps = async ({params}) => {
+    const artCat = await fetch(`${process.env.NEXT_PUBLIC_BACKEND}/articles/${params.slug}`, {
+        method : 'GET'
+    })
+    const artCats = await artCat.json()
+    return {
+        props : {
+            artCats: artCats?.data,
+        }
+    }
+  }
+  
+
+const Cats = ({artCats}) => {
     const router = useRouter()
-    const cat_name = router.query.slug
-    const { artCats } = getArtByCat(cat_name)
+    console.log(artCats);
+    // const { artCats } = getArtByCat(cat_name)
     const [filter, setFilter] = useState(null)
     const handleChangeFilter = (e) => {
         setFilter(e.target.value)

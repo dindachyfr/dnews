@@ -21,11 +21,11 @@ span.spanWrapping, input.formControl {
 }
 
 .wrapperRec{
-    width: 25rem;
-    box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.2);
+    width: 20rem;
+    height: 20rem;
+    box-shadow: 0px 10px 40px rgb(0 0 0 / 20%);
     border-radius: 16px;
-    background-color: #fcf7eb;
-  }
+}
 
 .recImg{
     border-radius: 16px;

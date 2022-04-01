@@ -28,7 +28,7 @@ const PostArticle = () => {
         PPData.append('title', form.title)
         PPData.append('cat_name', form.cat_name)
         PPData.append('content', form.content)
-        fetcher('POST', 'http://localhost:5000/articles', {
+        fetcher('POST', 'https://dnews-dindin.herokuapp.com/articles', {
             data: PPData
         }).then((res) => {
             alert("Article has been successfully submitted")
