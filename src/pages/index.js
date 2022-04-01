@@ -17,7 +17,7 @@ export const getServerSideProps = async () => {
       method : 'GET'
   })
 
-  const recArts = await fetch(`${process.env.NEXT_PUBLIC_BACKEND}/articles?sort=likes&order=desc&limit=3`, {
+  const recArts = await fetch(`${process.env.NEXT_PUBLIC_BACKEND}/articles?sort=likes&order=desc&limit=4`, {
       method : 'GET'
   })
   const cats = await categories.json()
@@ -112,7 +112,7 @@ const Home = ({cats, latest, recs}) => {
                 return (
                   <div 
                   className={`${styles.wrapperRec} d-flex flex-column m-3 pointer`}
-                  onClick={()=> router.push(`/main/articles/detail/${item?.article_id}`)}
+                  onClick={()=> router.push(`/main/articles/detail/${item?.id}`)}
                   key={index}>
                   <Image src={Kucing} width={130} height={150} className={`${styles.recImg} h-50`} />
                   <div className="rec-right p-3 d-flex flex-fill flex-column justify-content-between">
@@ -205,7 +205,7 @@ const Home = ({cats, latest, recs}) => {
               return (
                 <div 
                 className={`${styles.wrapperRec} d-flex flex-column m-3 pointer`}
-                onClick={()=> router.push(`/main/articles/detail/${item?.article_id}`)}
+                onClick={()=> router.push(`/main/articles/detail/${item?.id}`)}
                 key={index}>
                 <Image src={Kucing} width={130} height={150} className={`${styles.recImg} h-50`} />
                 <div className="rec-right p-3 d-flex flex-fill flex-column justify-content-between">

@@ -67,7 +67,7 @@ const Navbar = () => {
     return (
         <>
             <header className={`container-fluid bg-cream g-0 py-3 px-5 d-flex justify-content-between align-items-center`}>
-                <h3 className="fw-bold text-blue">D'News</h3>
+                <h3 className="fw-bold text-blue pointer" onClick={()=>router.push("/")}>D'News</h3>
                 <div className="navbar-menu w-50 d-flex justify-content-between align-items-center">
                     <span
                         className={home ? `text-blue pointer ${styles.borderBottom}` : "text-blue pointer"}
