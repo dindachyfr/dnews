@@ -122,7 +122,7 @@ const Articles = ({politic, beauts, showbizz, economyy, healthh, governmentt, cu
                 return (
                   <div 
                   className={`${styles.wrapperRec} d-flex flex-column m-3 pointer`}
-                  onClick={()=> router.push(`/main/articles/detail/${item?.article_id}`)}
+                  onClick={()=> router.push(`/main/articles/detail/${item?.id}`)}
                   key={index}>
                   <Image src={item?.pic ? item.pic : Kucing} width={130} height={150} className={`${styles.recImg} h-50`} />
                   <div className="rec-right p-3 d-flex flex-fill flex-column justify-content-between">
@@ -164,7 +164,7 @@ const Articles = ({politic, beauts, showbizz, economyy, healthh, governmentt, cu
                 return (
                   <div 
                   className={`${styles.wrapperRec} d-flex flex-column m-3 pointer`}
-                  onClick={()=> router.push(`/main/articles/detail/${item?.article_id}`)}
+                  onClick={()=> router.push(`/main/articles/detail/${item?.id}`)}
                   key={index}>
                   <Image src={item?.pic ? item.pic : Kucing} width={130} height={150} className={`${styles.recImg} h-50`} />
                   <div className="rec-right p-3 d-flex flex-fill flex-column justify-content-between">
@@ -205,7 +205,7 @@ const Articles = ({politic, beauts, showbizz, economyy, healthh, governmentt, cu
                 return (
                   <div 
                   className={`${styles.wrapperRec} d-flex flex-column m-3 pointer`}
-                  onClick={()=> router.push(`/main/articles/detail/${item?.article_id}`)}
+                  onClick={()=> router.push(`/main/articles/detail/${item?.id}`)}
                   key={index}>
                   <Image src={item?.pic ? item.pic : Kucing} width={130} height={150} className={`${styles.recImg} h-50`} />
                   <div className="rec-right p-3 d-flex flex-fill flex-column justify-content-between">
@@ -247,7 +247,7 @@ const Articles = ({politic, beauts, showbizz, economyy, healthh, governmentt, cu
                 return (
                   <div 
                   className={`${styles.wrapperRec} d-flex flex-column m-3 pointer`}
-                  onClick={()=> router.push(`/main/articles/detail/${item?.article_id}`)}
+                  onClick={()=> router.push(`/main/articles/detail/${item?.id}`)}
                   key={index}>
                   <Image src={item?.pic ? item.pic : Kucing} width={130} height={150} className={`${styles.recImg} h-50`} />
                   <div className="rec-right p-3 d-flex flex-fill flex-column justify-content-between">
@@ -288,7 +288,7 @@ const Articles = ({politic, beauts, showbizz, economyy, healthh, governmentt, cu
                 return (
                   <div 
                   className={`${styles.wrapperRec} d-flex flex-column m-3 pointer`}
-                  onClick={()=> router.push(`/main/articles/detail/${item?.article_id}`)}
+                  onClick={()=> router.push(`/main/articles/detail/${item?.id}`)}
                   key={index}>
                   <Image src={item?.pic ? item.pic : Kucing} width={130} height={150} className={`${styles.recImg} h-50`} />
                   <div className="rec-right p-3 d-flex flex-fill flex-column justify-content-between">
@@ -329,7 +329,7 @@ const Articles = ({politic, beauts, showbizz, economyy, healthh, governmentt, cu
                 return (
                   <div 
                   className={`${styles.wrapperRec} d-flex flex-column m-3 pointer`}
-                  onClick={()=> router.push(`/main/articles/detail/${item?.article_id}`)}
+                  onClick={()=> router.push(`/main/articles/detail/${item?.id}`)}
                   key={index}>
                   <Image src={item?.pic ? item.pic : Kucing} width={130} height={150} className={`${styles.recImg} h-50`} />
                   <div className="rec-right p-3 d-flex flex-fill flex-column justify-content-between">
@@ -370,7 +370,7 @@ const Articles = ({politic, beauts, showbizz, economyy, healthh, governmentt, cu
                 return (
                   <div 
                   className={`${styles.wrapperRec} d-flex flex-column m-3 pointer`}
-                  onClick={()=> router.push(`/main/articles/detail/${item?.article_id}`)}
+                  onClick={()=> router.push(`/main/articles/detail/${item?.id}`)}
                   key={index}>
                   <Image src={item?.pic ? item.pic : Kucing} width={130} height={150} className={`${styles.recImg} h-50`} />
                   <div className="rec-right p-3 d-flex flex-fill flex-column justify-content-between">
@@ -411,7 +411,7 @@ const Articles = ({politic, beauts, showbizz, economyy, healthh, governmentt, cu
                 return (
                   <div 
                   className={`${styles.wrapperRec} d-flex flex-column m-3 pointer`}
-                  onClick={()=> router.push(`/main/articles/detail/${item?.article_id}`)}
+                  onClick={()=> router.push(`/main/articles/detail/${item?.id}`)}
                   key={index}>
                   <Image src={item?.pic ? item.pic : Kucing} width={130} height={150} className={`${styles.recImg} h-50`} />
                   <div className="rec-right p-3 d-flex flex-fill flex-column justify-content-between">
@@ -452,7 +452,7 @@ const Articles = ({politic, beauts, showbizz, economyy, healthh, governmentt, cu
                 return (
                   <div 
                   className={`${styles.wrapperRec} d-flex flex-column m-3 pointer`}
-                  onClick={()=> router.push(`/main/articles/detail/${item?.article_id}`)}
+                  onClick={()=> router.push(`/main/articles/detail/${item?.id}`)}
                   key={index}>
                   <Image src={item?.pic ? item.pic : Kucing} width={130} height={150} className={`${styles.recImg} h-50`} />
                   <div className="rec-right p-3 d-flex flex-fill flex-column justify-content-between">

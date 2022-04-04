@@ -4,7 +4,7 @@ import { useRouter } from 'next/router'
 const BoxLeftLogin = () => {
     const router = useRouter()
     return (
-        <div className={`${styles.boxleft} w-50 bg-blue h-100`}>
+        <div className={`${styles.boxleft} d-lg-block d-none w-50 bg-blue h-100`}>
             <div
                 className={`pointer w-50 upper d-flex align-items-center`}
                 onClick={() => router.push('/')}>

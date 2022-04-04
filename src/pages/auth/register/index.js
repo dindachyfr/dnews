@@ -36,12 +36,25 @@ const Register = () => {
     }
     return (
         <>
-            <main className={`${styles.con} container-fluid g-0 d-flex`}>
+            <main className={`${styles.con} container-fluid g-0 d-flex flex-lg-row flex-column`}>
                 <BoxLeft />
-                <div className={`${styles.boxright} ${styles.conreg} box-right w-50 h-100 bg-cream`}>
-                    <h2 className="text-blue fw-bold">Sign Up</h2>
-                    <p className="text-blue-light my-3">Hey, welcome to News Today! Create an account to enjoy our full feautres!</p>
-                    <h5 className="text-blue mt-5 mb-3">Email Address:</h5>
+                <div className={`w-100 py-3 px-5 d-flex flex-column ${styles.wrapperMobileHead} d-lg-none justify-content-between`}>
+                <h1 className="text-blue fw-bold text-center">D'News</h1>
+                <div className="d-flex w-100 justify-content-between">
+                    <h1 className={`text-blue-light d-block d-lg-none`}
+                    onClick={()=> router.push("/auth/login")}>Login</h1>
+                    <h1 className={`text-blue d-block d-lg-none ${styles.loginText}`}
+                    >Sign Up</h1>
+                </div>
+            </div>
+
+                <div className={`${styles.boxright} ${styles.conreg} ${styles.wrapperMobile} box-right w-50 h-100 bg-cream`}>
+                    <h2 className="text-blue d-lg-block d-none fw-bold">Sign Up</h2>
+                    <p className="text-blue-light d-lg-block d-none my-3">Hey, welcome to News Today! Create an account to enjoy our full feautres!</p>
+                    <h2 className="text-blue fw-bold d-block d-lg-none">Welcome back</h2>
+                <p className="text-blue-light my-3 d-block d-lg-none">Sign in with your account</p>
+
+                    <h5 className="text-blue mt-lg-5 mt-3 mb-3">Email Address:</h5>
                     <input
                         className={`w-100 p-3 bg-transparent ${styles.inputBorder}`}
                         type="text"

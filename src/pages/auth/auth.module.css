@@ -27,3 +27,35 @@
     border: solid 1px #c8c6c6;
     border-radius: 1rem;
 }
+
+@media screen and (min-width: 240px) and (max-width: 968px) {
+    .boxright{
+        width: 100vw!important;
+        padding: 1.5rem;
+        background-color: #fff9eb;
+    }
+
+    .wrapperMobile{
+        border-top-left-radius: 1.5rem;
+        border-top-right-radius: 1.5rem;
+        box-shadow: 0px 0px 20px #eae0ca;
+    }
+
+    .wrapperMobileHead{
+        height: 25vh;
+    }
+
+    .con{
+        background-color: #fbf6e9!important
+    }
+
+    .loginText{
+        border-bottom: solid 2px #4c6687;
+        line-height: 1rem;
+    }
+    
+.conreg{
+    min-height: 75vh!important;
+    overflow: hidden;
+}
+}
