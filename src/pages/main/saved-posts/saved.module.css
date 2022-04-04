@@ -2,9 +2,10 @@
     border-radius: 16px;
 }
 
-/* .concon{
+.concon{
+    height: 145vh;
     overflow-y: auto;
-} */
+}
 
 .wrapperRec{
     width: 14rem;

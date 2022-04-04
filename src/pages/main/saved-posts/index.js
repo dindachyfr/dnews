@@ -25,7 +25,7 @@ const SavedPosts = () => {
         return (
         <Layout>
             <Sidebar>
-                <section className={`right p-5 ${styles.concon} h-100`}>
+                <section className={`right p-5 ${styles.concon}`}>
                     <p className="w-100 text-center text-blue fw-bold">Saved Posts</p>
                     {/* mapping saved posts di sini */}
                     <div className=" mt-3 lower-category w-100 d-flex justify flex-wrap">
