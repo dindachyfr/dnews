@@ -1,8 +1,12 @@
 .headerBG {
     background: url("../../../assets/BGArticles.svg") no-repeat;
-    height: 60vh;
+    height: 70vh;
     width: 100vw;
     background-size: cover;
+}
+
+.header{
+    overflow-y:hidden;
 }
 
 .selectInput{

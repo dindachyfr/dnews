@@ -24,7 +24,7 @@ a {
 }
 
 .bg-blue-light{
-  background-color: #c8c6c6!important;
+  background-color: #a8a6a6!important;
 }
 
 .text-cream{
@@ -36,7 +36,7 @@ a {
 }
 
 .text-blue-light{
-  color: #c8c6c6!important;
+  color: #a8a6a6!important;
 }
 
 .pointer{
@@ -48,10 +48,10 @@ a {
 }
 
 .blue-hover:hover {
-  color: #c8c6c6!important;
+  color: #a8a6a6!important;
   cursor: pointer;
   background-color: #fff5de!important;
-  border: solid 1px #c8c6c6;
+  /* border: solid 1px #a8a6a6; */
 }
 
 .rounded-3{

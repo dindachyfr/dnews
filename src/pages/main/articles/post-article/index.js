@@ -63,7 +63,7 @@ const PostArticle = () => {
                     <div className="left w-25 pe-3 d-flex flex-column justify-content-between">
                         <div className={`${styles.outerFrame} p-4 d-flex justify-content-center`}>
                             <div className={`${styles.inner} d-flex justify-content-center align-items-center text-blue-light`}>
-                                {pic ? <Image src={URL.createObjectURL(pic)} height={469} width={299} className={styles.border} /> : "image here"}
+                                {pic ? <Image src={URL.createObjectURL(pic)} height={500} width={299} className={styles.border} /> : "image here"}
                                 {/* <Image src={Kucing} height={469} width={299} className={styles.border}/> */}
                             </div>
                         </div>
@@ -87,7 +87,7 @@ const PostArticle = () => {
                                 value={form.title}
                                 onChange={handleChange} />
                             <select
-                                className={`w-50 m-3 bg-transparent text-blue ${styles.inputBorder}`}
+                                className={`w-50 m-3 me-0 bg-transparent text-blue ${styles.inputBorder}`}
                                 onChange={handleChange}
                                 name="cat_name"
                                 value={form.cat_name}>
@@ -105,7 +105,7 @@ const PostArticle = () => {
                         <div className={`lower w-100 flex-fill p-3`}>
                             <textarea
                                 name="content"
-                                className={`w-100 m-3 p-3 bg-transparent h-100 ${styles.inputBorder}`}
+                                className={`w-100 m-2 p-3 bg-transparent h-100 ${styles.inputBorder}`}
                                 value={form.content}
                                 onChange={handleChange}
                             >

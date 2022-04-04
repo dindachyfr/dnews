@@ -1,5 +1,9 @@
 .boxleft, .boxright{
-    padding: 3rem 5rem
+    padding: 1.5rem 5rem
+}
+
+.con{
+    height: 100vh;
 }
 
 .radiusbtn{

@@ -42,7 +42,7 @@ const Login = () => {
     <div className={`${styles.boxright} box-right w-50 h-100 bg-cream`}>
         <h2 className="text-blue fw-bold">Login</h2>
         <p className="text-blue-light my-3">Hey, welcome back to News Today!</p>
-        <h5 className="text-blue mt-5 mb-3">Email Address:</h5>
+        <h5 className="text-blue my-3">Email Address:</h5>
         <input
             className={`w-100 p-3 bg-transparent ${styles.inputBorder}`}
             type="text"

@@ -36,14 +36,14 @@ const Articles = () => {
 
   return (
     <Layout>
-      <main className="container-fluid g-0 bg-cream">
+      <main className={`container-fluid g-0 bg-cream ${styles.header}`}>
         <header className={`${styles.headerBG}`}>
-          <div className="wrapper p-3 ps-5 w-50">
-            <h4 className={`text-blue ${styles.title} mt-5`}>Start Writing an Article</h4>
+          <div className="wrapper p-3 ps-5 w-50 d-flex flex-column justify-content-around">
+            <h4 className={`text-blue ${styles.title}`}>Start Writing an Article</h4>
             <h6 className="text-blue my-5 w-75">You can be an author by being active in reading artciles in a month
               or you can request to be an author if you have been a member for three months.</h6>
             <div
-              className="bg-blue mt-5 px-3 py-2 text-center text-cream w-25 pointer blue-hover"
+              className="bg-blue px-3 py-2 text-center text-cream w-25 pointer blue-hover"
               onClick={handleRouter}
             >Start writing!</div>
           </div>

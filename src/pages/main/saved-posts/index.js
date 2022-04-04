@@ -35,7 +35,7 @@ const SavedPosts = () => {
                   className={`${styles.wrapperRec} d-flex flex-column m-3 pointer`}
                   onClick={()=> router.push(`/main/articles/detail/${item?.id}`)}
                   key={index}>
-                  <Image src={Kucing} width={130} height={150} className={`${styles.recImg} h-50`} />
+                  <Image src={item?.pic ? item.pic : Kucing} width={`100%`} height={150} className={`${styles.recImg} h-50`} />
                   <div className="rec-right p-3 d-flex flex-fill flex-column justify-content-between">
                     <div className="rec-right-upper h-50">
                       <h5 className="text-blue">{item?.title.substr(0, 35)}</h5>

@@ -54,7 +54,7 @@ const Profedit = () => {
     }
 
     const handleSubmit = () => {
-        fetcher('PUT', `http://localhost:5000/users/${profile.id}`, {
+        fetcher('PUT', `https://dnews-dindin.herokuapp.com/users/${profile.id}`, {
             data: form
         }).then((res) => {
             alert("Profile has been successfully updated")
@@ -76,12 +76,17 @@ const Profedit = () => {
     }
 
     const handleUpdateRole = () => {
-        fetcher('PUT', `http://localhost:5000/users/author/${profile.id}`)
+        if(profile.role === "member"){
+            fetcher('PUT', `https://dnews-dindin.herokuapp.com/users/author/${profile.id}`)
             .then((res) => {
                 window.reload()
             }).catch((err) => {
                 console.log(err);
             })
+        }
+        else{
+            alert("You are already an author!")
+        }
     }
 
 
@@ -92,7 +97,7 @@ const Profedit = () => {
             <Sidebar>
                 <section className="right p-5">
                     <div className="upper d-flex w-100 justify-content-center">
-                        <Image src={Kucing} width={113} height={113} className='radius-50' alt='' />
+                        <Image src={profile?.profile_picture ? profile.profile_picture : Kucing} width={113} height={113} className='radius-50' alt='' />
                     </div>
                     <div className="d-flex w-100 justify-content-center mt-3">
                         <p className="text-blue-light me-2 pointer"
@@ -183,12 +188,12 @@ const Profedit = () => {
                 </section>
                 {modal &&
                     <main class={`${styles.conModal} container-fluid d-flex flex-column p-0 justify-content-between`}>
-                        <div class={`${styles.modalPin} bg-light w-25 h-50 p-3 m-3`}>
-                            <div class="top-modal d-flex justify-content-between m-3">
+                        <div class={`${styles.modalPin} d-flex flex-column justify-content-around bg-light w-25 p-3 m-3`}>
+                            <div class="top-modal d-flex justify-content-between mt-5">
                                 <h4>Set Profile Picture</h4>
                                 <h3 class="close-modal pointer" onClick={handleModal}>x</h3>
                             </div>
-                            <p class="text-blue-light m-3 mb-5">Set a cool picture of you to your profile</p>
+                            <p class="text-blue-light">Set a cool picture of you to your profile</p>
                             <div className='wrapper-pp-modal w-100 d-flex justify-content-center'>
                                 <img className="user-pic-modal my-auto" width={113} height={113} src={profile.profile_picture ? profile.profile_picture : Kucing} alt="" />
                             </div>

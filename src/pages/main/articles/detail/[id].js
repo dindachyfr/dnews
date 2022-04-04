@@ -7,6 +7,7 @@ import styles from './detail.module.css'
 import { getDetailArticle } from '../../../api/article'
 import { getComments } from '../../../api/comment'
 import fetcher from '../../../../helper/fetcher'
+import { getProfile } from '../../../api/user'
 
 export const getServerSideProps = async ({params}) => {
     const art = await fetch(`${process.env.NEXT_PUBLIC_BACKEND}/articles/detail/${params.id}`, {
@@ -24,6 +25,7 @@ export const getServerSideProps = async ({params}) => {
 const ArticleDetail = ({article}) => {
     const router = useRouter()
     const id = router.query.id
+    const {profile, error} = getProfile()
     const user = typeof window !== 'undefined' && JSON.parse(localStorage.getItem('user'))
     // const { article } = getDetailArticle(id)
     const { comments } = getComments(id)
@@ -143,7 +145,7 @@ const ArticleDetail = ({article}) => {
                 <div className={`${styles.wrapperContent}`}>
                     {/* article title, image, and info lays here */}
                     <section className={`upper-section w-100 d-flex flex-fill`}>
-                        <Image src={Kucing} width={595} height={370} alt='' className='me-3' />
+                        <Image src={article?.pic} width={595} height={370} alt='' className='me-3' />
                         <div className="upper-right d-flex flex-column flex-fill justify-content-between ms-3">
                             <h2 className="text-blue">{article?.title}</h2>
                             <p className="text-blue">{article?.author} - Author</p>
@@ -184,15 +186,14 @@ const ArticleDetail = ({article}) => {
                 {/* article content lays here */}
                 <section className={`w-100 my-lg-5 text-wrap text-blue lh-base ${styles.contentText}`}>
                     {article?.content}
-                    <br />
+                    {/* <br />
                     <br />
                     During the 2019 Southeast Asian Games, governor the Sports Authority of Thailand (SAT) Kongsak Yodmanee criticised the organization of the games, as the Philippines held the games in many cities and municipalities, causing to the various concerns and controversies. He will propose to hold the next Thailand's Southeast Asian Games in "one" city or province. He also suggested Bangkok and Chonburi Province are the best choice for hosting the Thailand's games. He mentioned Bangkok traffic is less congested than Manila and the city has many existing venues for the games but water sports venues.
                     Bangkok hosted the inaugural games in 1959 and 1967 as Southeast Asian Peninsular Games, which were the precursor to the modern Southeast Asian Games, and 1985 as Southeast Asian Games. Bangkok hosted many global and continental events such as four-time Asian Games and Summer Universiade in 2007.
                     Bangkok will host the 2021 Asian Indoor and Martial Arts Games with Chonburi Province It acted as the test event and a prelude for the future multi-sport event, a proposed Youth Olympic Games in 2026.
                     During the 2019 Southeast Asian Games, governor the Sports Authority of Thailand (SAT) Kongsak Yodmanee criticised the organization of the games, as the Philippines held the games in many cities and municipalities, causing to the various concerns and controversies. He will propose to hold the next Thailand's Southeast Asian Games in "one" city or province. He also suggested Bangkok and Chonburi Province are the best choice for hosting the Thailand's games. He mentioned Bangkok traffic is less congested than Manila and the city has many existing venues for the games but water sports venues.
                     Bangkok hosted the inaugural games in 1959 and 1967 as Southeast Asian Peninsular Games, which were the precursor to the modern Southeast Asian Games, and 1985 as Southeast Asian Games. Bangkok hosted many global and continental events such as four-time Asian Games and Summer Universiade in 2007.
-                    Bangkok will host the 2021 Asian Indoor and Martial Arts Games with Chonburi Province It acted as the test event and a prelude for the future multi-sport event, a proposed Youth Olympic Games in 2026.
-
+                    Bangkok will host the 2021 Asian Indoor and Martial Arts Games with Chonburi Province It acted as the test event and a prelude for the future multi-sport event, a proposed Youth Olympic Games in 2026. */}
                 </section>
                 </div>
 
@@ -203,7 +204,7 @@ const ArticleDetail = ({article}) => {
                     <div className={styles.wrapperComment}>
                     <div className="input-comment-section d-flex align-items-center">
                         <div className="d-flex align-items-center me-3">
-                            <Image src={Kucing} width={55} height={55} className={`rounded me-2`} alt='' />
+                            <Image src={profile?.profile_picture ? profile.profile_picture : Kucing} width={55} height={55} className={`rounded me-2`} alt='' />
                             <div className="d-flex flex-column">
                                 <p className="fw-bold text-blue mb-0">You</p>
                                 <input
@@ -219,9 +220,11 @@ const ArticleDetail = ({article}) => {
                     {/* mapping comment here */}
                     {comments?.map((comment, index) => {
                         return (
-                            <div className="d-flex align-items-center my-3" key={index}>
-                                <Image src={Kucing} width={55} height={55} className={`rounded me-2`} alt='' />
-                                <div className="d-flex flex-column">
+                            <div className="d-flex align-items-center my-3 w-100" key={index}>
+                                <div className="wrapper">
+                                <Image src={comment?.profile_picture ? comment.profile_picture : Kucing} width={55} height={55} className={`rounded me-2`} alt='' />
+                                </div>
+                                <div className="d-flex flex-column w-75">
                                     <p className="fw-bold text-blue mb-0">{comment?.username}</p>
                                     <p className="text-blue text-wrap w-100">{comment?.comment}</p>
                                 </div>

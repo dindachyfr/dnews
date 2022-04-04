@@ -1,13 +1,13 @@
 .outerFrame{
-    height: 535px;
-    width: 342px;
-    border: solid 1px #c8c6c6;
+    height: 469px;
+    width: 300px;
+    border: solid 1px #a8a6a6;
     border-radius: 2rem;
 }
 
 .inner{
     width: 299px;
-    height: 469px;
+    height: 420px;
     background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='32' ry='32' stroke='%23333' stroke-width='1' stroke-dasharray='6%2c 14' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
     border-radius: 32px;}
 

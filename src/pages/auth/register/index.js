@@ -38,7 +38,7 @@ const Register = () => {
         <>
             <main className={`${styles.con} container-fluid g-0 d-flex`}>
                 <BoxLeft />
-                <div className={`${styles.boxright} box-right w-50 h-100 bg-cream`}>
+                <div className={`${styles.boxright} ${styles.conreg} box-right w-50 h-100 bg-cream`}>
                     <h2 className="text-blue fw-bold">Sign Up</h2>
                     <p className="text-blue-light my-3">Hey, welcome to News Today! Create an account to enjoy our full feautres!</p>
                     <h5 className="text-blue mt-5 mb-3">Email Address:</h5>

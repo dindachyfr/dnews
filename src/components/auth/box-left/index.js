@@ -4,7 +4,7 @@ import { useRouter } from 'next/router'
 const BoxLeft = () => {
     const router = useRouter()
     return (
-        <div className={`${styles.boxleft} w-50 bg-blue h-100`}>
+        <div className={`${styles.boxleft} ${styles.con} w-50 bg-blue h-100`}>
             <div
                 className={`pointer w-50 upper d-flex align-items-center`}
                 onClick={() => router.push('/')}>
@@ -14,7 +14,7 @@ const BoxLeft = () => {
                 </svg>
                 <h4 className="text-cream ms-3">Home Page</h4>
             </div>
-            <div className="w-100 d-flex flex-column align-items-center mt-5">
+            <div className="w-100 d-flex flex-column align-items-center">
                 <h1 className={`${styles.titleText} mt-3 text-align-center text-cream`}>D'News</h1>
                 <p className="text-cream text-align-center">newstoday@mail.com</p>
             </div>
@@ -28,7 +28,7 @@ const BoxLeft = () => {
             <div
                 className={`${styles.radiusbtn} text-blue bg-blue-light w-100 my-5 p-3 d-flex justify-content-center`}
                 onClick={() => router.push('/auth/login')}>
-                Login Here
+                Login here
             </div>
             <div className={`w-100 d-flex justify-content-between`}>
                 <div className={`left-section d-flex flex-column`}>

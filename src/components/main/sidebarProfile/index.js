@@ -29,7 +29,7 @@ const Sidebar = (props) => {
                     <h4 className="text-blue">Profile</h4>
                     <div className={`${styles.profileBox} p-3 rounded-3 shadow-lg w-75 mx-3`}>
                         <div className="upper d-flex">
-                            <Image src={Kucing} width={66} height={60} alt='' className='rounded-3' />
+                            <Image src={profile?.profile_picture ? profile.profile_picture : Kucing} width={66} height={60} alt='' className='rounded-3' />
                             <div className="d-flex flex-column justify-content-between ms-3">
                                 <p className="text-blue-light">@{profile?.username}</p>
                                 <h6 className="text-blue fw-bold">{profile?.name}</h6>

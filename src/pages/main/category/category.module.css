@@ -1,8 +1,12 @@
 .headerBG {
     background: url("../../../assets/BGCat.svg") no-repeat;
-    height: 60vh;
+    height: 70vh;
     width: 100vw;
     background-size: cover;
+}
+
+.header{
+    overflow-y: hidden;
 }
 
 .title{

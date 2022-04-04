@@ -14,14 +14,14 @@ const BoxLeftLogin = () => {
                 </svg>
                 <h4 className="text-cream ms-3">Home Page</h4>
             </div>
-            <div className="w-100 d-flex flex-column align-items-center mt-5">
+            <div className="w-100 d-flex flex-column align-items-center">
                 <h1 className={`${styles.titleText} mt-3 text-align-center text-cream`}>D'News</h1>
                 <p className="text-cream text-align-center">newstoday@mail.com</p>
             </div>
             <div className="w-100 d-flex justify-content-center mt-5 pt-5">
                 <div className="w-100 d-flex justify-content-between mb-3">
                     <hr className="w-25 text-cream" />
-                    <p className="text-cream">Dont have an account yet?</p>
+                    <p className="text-cream">No account yet?</p>
                     <hr className="w-25 text-cream" />
                 </div>
             </div>

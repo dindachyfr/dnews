@@ -30,7 +30,7 @@ const Category = () => {
 
     return (
         <Layout>
-            <main className="container-fluid g-0 bg-cream">
+            <main className={`${styles.header} container-fluid g-0 bg-cream`}>
                 <header className={`${styles.headerBG}`}>
                     <div className="wrapper p-3 ps-5 w-50">
                         <h4 className={`text-blue ${styles.title} mt-5`}>Choose Article by Category</h4>
