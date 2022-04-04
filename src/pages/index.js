@@ -182,7 +182,7 @@ const Home = ({ cats, latest, recs }) => {
         </section>
         {/* success story section */}
         <section className={`${styles.sucessSS} bg-blue w-100 p-5`}>
-          <div className={`wrapper mt-3 d-flex justify-content-between w-100 h-100`}>
+          <div className={`wrapper d-flex justify-content-around w-100 h-100`}>
             <div className="left-section w-50 d-flex justify-content-around flex-column h-100">
               <div className="wrapper w-50">
                 <h3 className="text-cream">Let's hear about Kayla's success story</h3>
@@ -191,7 +191,7 @@ const Home = ({ cats, latest, recs }) => {
                 <h5 className="text-cream">See how well News Today works in a real user’s life. </h5>
               </div>
               <div
-                className="bg-cream px-3 py-2 text-center text-blue w-25 pointer"
+                className="bg-cream px-3 py-2 text-center text-blue w-50 pointer"
               >Lets get started!</div>
             </div>
             <Image src={Kayla} width={672} height={390} alt='' />
