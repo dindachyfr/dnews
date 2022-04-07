@@ -95,7 +95,7 @@ const Profedit = () => {
             {/* <hr className='w-100 p-0 m-0' />
             <main className={`${styles.mainCon} container-fluid g-0 bg-cream d-flex`}> */}
             <Sidebar>
-                <section className="right p-5">
+                <section className={`${styles.mainCon} right p-5`}>
                     <div className="upper d-flex w-100 justify-content-center">
                         <Image src={profile?.profile_picture ? profile.profile_picture : Kucing} width={113} height={113} className='radius-50' alt='' />
                     </div>

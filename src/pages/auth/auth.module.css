@@ -32,13 +32,13 @@
     .boxright{
         width: 100vw!important;
         padding: 1.5rem;
-        background-color: #fff9eb;
+        background-color: #fff5de;
     }
 
     .wrapperMobile{
         border-top-left-radius: 1.5rem;
         border-top-right-radius: 1.5rem;
-        box-shadow: 0px 0px 20px #eae0ca;
+        box-shadow: 0px 10px 21px #4c6687;
     }
 
     .wrapperMobileHead{
@@ -46,7 +46,7 @@
     }
 
     .con{
-        background-color: #fbf6e9!important
+        background-color: #fff5de!important
     }
 
     .loginText{
@@ -58,4 +58,12 @@
     min-height: 75vh!important;
     overflow: hidden;
 }
+
+.inputBorder{
+    border: none;
+    border-bottom: solid 1px #c8c6c6;
+    border-radius: 0;
+    outline: none;
+}
+
 }

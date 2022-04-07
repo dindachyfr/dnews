@@ -51,8 +51,8 @@ const Register = () => {
                 <div className={`${styles.boxright} ${styles.conreg} ${styles.wrapperMobile} box-right w-50 h-100 bg-cream`}>
                     <h2 className="text-blue d-lg-block d-none fw-bold">Sign Up</h2>
                     <p className="text-blue-light d-lg-block d-none my-3">Hey, welcome to News Today! Create an account to enjoy our full feautres!</p>
-                    <h2 className="text-blue fw-bold d-block d-lg-none">Welcome back</h2>
-                <p className="text-blue-light my-3 d-block d-lg-none">Sign in with your account</p>
+                    <h2 className="text-blue fw-bold d-block d-lg-none">Hey, welcome!</h2>
+                <p className="text-blue-light my-0 d-block d-lg-none">Sign up to see popular news, your can write your own too!</p>
 
                     <h5 className="text-blue mt-lg-5 mt-3 mb-3">Email Address:</h5>
                     <input
@@ -79,7 +79,7 @@ const Register = () => {
                         value={form.phone_number}
                         placeholder="Enter your phone number" />
                     <div 
-                    className={`${styles.radiusbtn} text-cream bg-blue w-100 my-5 p-3 d-flex justify-content-center`}
+                    className={`${styles.radiusbtn} text-cream bg-blue w-100 my-lg-5 my-4 p-3 d-flex justify-content-center`}
                     onClick={handleSubmit}>
                         Sign Up
                     </div>

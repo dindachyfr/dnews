@@ -39,7 +39,12 @@ const Navbar = () => {
             setCat(false)
             setAbout(false)
         }
-
+        if (router.pathname.includes("saved-posts")) {
+            setHome(false)
+            setArticles(false)
+            setCat(false)
+            setAbout(false)
+        }
     }
 
     const handleNavigate1 = () => {
